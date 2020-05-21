@@ -2,9 +2,9 @@
 def findSmallest(arr):
     smallest = arr[0]
     smallest_index = 0
-    for i in range(1,len(array)):
-        if array[i] < smallest:
-            smallest = array[i]
+    for i in range(1,len(arr)):
+        if arr[i] < smallest:
+            smallest = arr[i]
             smallest_index = i
     return smallest_index
 
@@ -19,7 +19,13 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
+    for k in range(0, len(arr) - 1, 1):
+        for i in range(0, len(arr) -1 -k, 1):
+            if arr[i] > arr[i + 1]:
+                temp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = temp 
+
 
 
     return arr
